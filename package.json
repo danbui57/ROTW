@@ -1,0 +1,25 @@
+{
+  "name": "ROTW",
+  "version": "1.0.0",
+  "description": "Signup to create an account, login, and post rude comments",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danbui57/ROTW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danbui57/ROTW/issues"
+  },
+  "homepage": "https://github.com/danbui57/ROTW#readme",
+  "dependencies": {
+    "express": "^4.17.0",
+    "nodemon": "^1.19.0"
+  }
+}
