@@ -35,7 +35,10 @@ app.get("/", (req, res) => {
 const models = require("./app/models");
 
 //Routes
-const authRoute = require("./app/routes/auth")(app)
+const authRoute = require("./app/routes/auth")(app, passport)
+
+//load passport strategies
+require("./app/config/passport/passport")(passport, models.user)
 
 //Sync Database
 models.sequelize.sync().then(function () {
