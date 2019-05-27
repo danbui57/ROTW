@@ -30,6 +30,16 @@ app.get("/", (req, res) => {
     res.send("Welcome to ROTW")
 });
 
+//Models
+const models = require("./app/models");
+
+//Sync Database
+models.sequelize.sync().then(function () {
+    console.log("Nice! Database looks fine")
+}).catch(function (err) {
+    console.log(err, "Something went wrong with the Database Update!")
+})
+
 app.listen(PORT,(err) => {
 if (!err) {
     console.log(`Server successfully connected to http://localhost: ${PORT}`);
