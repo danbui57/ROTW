@@ -27,11 +27,15 @@ app.use(passport.session()); // persistent login sessions
 
 //Route to homepage
 app.get("/", (req, res) => {
+
     res.send("Welcome to ROTW")
 });
 
 //Models
 const models = require("./app/models");
+
+//Routes
+const authRoute = require("./app/routes/auth")(app)
 
 //Sync Database
 models.sequelize.sync().then(function () {
