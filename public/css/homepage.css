@@ -1,0 +1,96 @@
+/* .nav {min-width: 100%} */
+
+#bg {
+        background-image: url("/images/Flame.gif");
+        height: 523px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: auto
+}
+
+#text {
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 32px;
+    font-family: 'Bangers', cursive;
+    font-size: 125px;
+}
+
+#bottom-text {
+    min-width: 100%;
+    font-size: 100px;
+    text-align: center;
+    color: rgb(255, 0, 0);
+    margin-top: 21rem;
+    background-color:#f5f5f5;
+    padding: auto;
+    font-family: 'Monoton', cursive;
+}
+
+#bottom-text:hover {
+    
+    background-color:#f5f5f5;
+    color: rgb(255, 0, 0, 0.3);
+}
+
+
+#roastPic {
+    width: 40%;
+    margin: 10px 30%;
+
+}
+
+#commentBox {
+    margin: 0px 50px 25px 50px
+}
+
+#submit {
+    float:right;
+    margin-right: 50px 
+}
+
+
+.like {
+    color: purple;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align:center;
+    margin: auto
+}
+
+hr {
+    width: 200px
+}
+
+.signUp {
+    position:relative;
+    left: 35rem;
+}
+
+#commentBox {
+    margin: 25px 0 50px 30%;
+    border: inset
+}
+
+#submit {
+    margin: 23px 30% 50px 0
+}
+
+#comment {
+
+    width: 40%;
+    margin: 10px 30%;
+    border-style: solid double solid double
+}
+.userComment {
+    margin-left:5px
+}
+

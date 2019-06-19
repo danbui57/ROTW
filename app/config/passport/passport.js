@@ -89,4 +89,51 @@ module.exports = function (passport, user) {
 
     });
 
+    passport.use("local-signin", new LocalStrategy(
+        
+        {
+        //by default, local strategy uses username and password, we will override with email
+    
+        usernameField: "email",
+        passwordField: "password",
+        passReqToCallback: true // allows us to pass back the entire request to the callback
+    },
+    
+    
+    function (req, email, password, done) {
+        const User = user;
+         
+       
+        const isValidPassword = function (userPassword, password) {
+            
+            return bCrypt.compareSync(password, userPassword);
+            
+            
+        }
+        User.findOne({
+            where: {
+                email: email           
+            }
+
+        }).then(function (user) {
+            if (!user) {
+                
+                return done(null, false, console.log("email does not exist"));
+            }
+            if (!isValidPassword(user.password, password)) {
+            
+                return done(null, false, console.log("Incorrect password"))
+            }
+            const userinfo = user.get();
+            return done(null, userinfo, console.log("USERINFO:", userinfo));
+
+        }).catch(function (err) {
+            console.log("ERROR:", err);
+        
+            return done(null, false, console.log("Something went wrong with your signin", user ));
+        });
+
+      }
+    ));
+    
 }

@@ -44,12 +44,12 @@ require("./app/config/passport/passport")(passport, models.user)
 models.sequelize.sync().then(function () {
     console.log("Nice! Database looks fine")
 }).catch(function (err) {
-    console.log(err, "Something went wrong with the Database Update!")
+    console.log("ERROR!", err, "Something went wrong with the Database Update!")
 })
 
 app.listen(PORT,(err) => {
 if (!err) {
-    console.log(`Server successfully connected to http://localhost: ${PORT}`);
+    console.log(`Server successfully connected to http://localhost:${PORT}`);
 }else { 
     console.log("error:", err);
 }

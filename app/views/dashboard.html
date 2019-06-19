@@ -1,18 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-
+1<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home Page</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Roast Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/homepage.css" />
+    <!--Jquery Script-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
+<!--Animate CSS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Bangers|Monoton" rel="stylesheet">
+<!--Jquery link-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!--Stackpath CSS-->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--Stackpath Javascript-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
-
 <body>
 
-    <h2>Dashboard</h2>
-    <h5>Hurray! you are logged in.</h5>
+    <div id="bg">
+        <nav class="navbar fixed-top navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Roast Of The Week</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/signup">Create Account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/login">Login</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
 
+          <div id="text" class=" animated fadeInUp slow">Get Ready To Roast!!</div>
+
+          <div id="bottom-text" class="animated flash delay-2s slow">How Do You Play?</div>
+
+          <div id="container">
+
+            <div id="section1">
+              <h1>Introduction</h1>
+              <hr>
+              <p>Win some easy money the best way possible. Put some of your jokes to the test
+                  and get the most votes to win the cash prize! </p>
+              <h1>Quick Start</h1>
+              <hr>
+              <button class="Btn signUp">sign up now!</button>
+            </div>
+          </div>
+
+          <div id="photo">
+                <img id="roastPic" src="https://i.chzbgr.com/full/9192060672/h9648CC01/" alt="tekashi69" width="350px">
+          </div>
+
+
+          <input id="commentBox" type="text" placeholder= "Write your comment here..." name="Message" size="30px">
+
+          <input type="button" id="submit" value="COMMENT" class="Btn button button-primary">
+
+          <div id="comment"></div>
+       
+
+   
+
+
+    </div>
+
+    <script src="js/main.js"></script>
+
+    
 </body>
-
 </html>
