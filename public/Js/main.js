@@ -1,14 +1,66 @@
+// $(document).ready(function() {
+
+//     const postContainer = $(".post-container");
+
+//     const postCategorySelect = $("#category");
+
+    const textInput = $("#commentBox");
+//     const pacForm = $("#pac");
+
+//     $(pacForm).on("submit", handleFormSubmit);
+//     const url = window.location.search;
+//     let postId;
+//     let userId;
+
+//     updating = false;
+
+//     function handleFormSubmit(event) {
+//         console.log("clicked")
+
+        
+//         event.preventDefault()
+//         if(!textInput.val().trim()) {
+//             return;
+//         }
+//         const newPost = {body: textInput.val().trim()}
+
+//         if (updating) {
+//             newPost.id = postId;
+//             updatePost(newPost);
+//         }
+//         else {
+//             submitPost(newPost);
+//         }
+//     }
+
+//    function submitPost(post) {
+//        $.post("/api/posts", post, function() {
+//            window.location.href = "/"
+//        });
+//    }
+
+//    function updatePost(post) {
+//        $.ajax({
+//            method: "PUT",
+//            url: "/api/posts",
+//            data: post
+//        })
+//        .then(function() {
+//            window.location.href - "/dashboard"
+//        })
+//    }
+// });
+
 let array = [];
 
-var textInput = $("#commentBox");
 
 let likeCount;
 
 let unlikeCount;
 
-$("#submit").click(function() {
+$("#submit").click(function(event) {
 
-    
+    event.preventDefault();
 
     const text = textInput.val().trim();
     if (text === "") {
@@ -37,13 +89,13 @@ $("#submit").click(function() {
         unlike.text(" Unlike");
         
 
-        $("#comment").append(userComment)
+        $("#comment").prepend(userComment)
         div.text(array[i]);
-        userComment.append(div);
-        userComment.append(like);
-        userComment.append("<span id='L'>");
-        userComment.append(unlike);
-        userComment.append("<span id='U'>");
+        userComment.prepend(div);
+        userComment.prepend(like);
+        userComment.prepend("<span id='L'>");
+        userComment.prepend(unlike);
+        userComment.prepend("<span id='U'>");
         textInput.val("");
 
     }

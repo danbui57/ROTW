@@ -20,7 +20,7 @@
 <!--Google Fonts-->
 <link href="https://fonts.googleapis.com/css?family=Bangers|Monoton" rel="stylesheet">
 <!--Jquery link-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <!--Stackpath CSS-->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!--Stackpath Javascript-->
@@ -30,7 +30,7 @@
 
     <div id="bg">
         <nav class="navbar fixed-top navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Roast Of The Week</a>
+            <a id="Title" class="navbar-brand" href="#">Roast Of The Week</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -74,18 +74,21 @@
                 <img id="roastPic" src="https://i.chzbgr.com/full/9192060672/h9648CC01/" alt="tekashi69" width="350px">
           </div>
 
-
+          <form id="pac">
           <input id="commentBox" type="text" placeholder= "Write your comment here..." name="Message" size="30px">
+          <button type="submit" id= "submit" class="Btn button button-primary">COMMENT</button>
+          </form>
 
-          <input type="button" id="submit" value="COMMENT" class="Btn button button-primary">
-
-          <div id="comment"></div>
-       
+<div class="row">
+      <div  id="comment" class="col-md-12 blog-container">
+      </div>
+    </div>       
 
    
 
 
     </div>
+    <script src="js/username.js"></script>
 
     <script src="js/main.js"></script>
 

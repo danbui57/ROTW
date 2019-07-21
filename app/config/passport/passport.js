@@ -33,7 +33,7 @@ module.exports = function (passport, user) {
                         message: "That email is already taken"
                     });
                 
-                } else {
+                } else { 
                     const userPassword = generateHash(password);
                     const data =
 
@@ -78,7 +78,7 @@ module.exports = function (passport, user) {
 
             if (user) {
 
-                done(null, user.get());
+                done(null, user.get(), console.log("USER: ", user.username));
 
             } else {
 
@@ -103,6 +103,7 @@ module.exports = function (passport, user) {
     function (req, email, password, done) {
         const User = user;
          
+        
        
         const isValidPassword = function (userPassword, password) {
             
@@ -118,22 +119,28 @@ module.exports = function (passport, user) {
         }).then(function (user) {
             if (!user) {
                 
-                return done(null, false, console.log("email does not exist"));
+               return done(null, false, console.log("email does not exist"));
             }
             if (!isValidPassword(user.password, password)) {
             
                 return done(null, false, console.log("Incorrect password"))
             }
+            
             const userinfo = user.get();
-            return done(null, userinfo, console.log("USERINFO:", userinfo));
+
+        
+            return done(null, userinfo);
+            
 
         }).catch(function (err) {
             console.log("ERROR:", err);
         
             return done(null, false, console.log("Something went wrong with your signin", user ));
         });
-
+ 
       }
     ));
+
+    
     
 }

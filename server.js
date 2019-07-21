@@ -35,7 +35,11 @@ app.get("/", (req, res) => {
 const models = require("./app/models");
 
 //Routes
-const authRoute = require("./app/routes/auth")(app, passport)
+require("./app/routes/user-api-routes")(app, models.user);
+
+const authRoute = require("./app/routes/auth")(app, passport);
+// require("./app/routes/post-api-routes")(app);
+
 
 //load passport strategies
 require("./app/config/passport/passport")(passport, models.user)
