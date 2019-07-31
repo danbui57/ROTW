@@ -5,6 +5,7 @@ const session = require("express-session");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const ejs = require("ejs");
+const path = require("path")
 const env = require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 
@@ -28,17 +29,17 @@ app.use(passport.session()); // persistent login sessions
 //Route to homepage
 app.get("/", (req, res) => {
 
-    res.send("Welcome to ROTW")
+    res.sendFile(path.join(__dirname, "/app/views/index.html"))
 });
 
 //Models
 const models = require("./app/models");
 
 //Routes
+require("./app/routes/post-api-routes")(app, models.post);
 require("./app/routes/user-api-routes")(app, models.user);
 
 const authRoute = require("./app/routes/auth")(app, passport);
-// require("./app/routes/post-api-routes")(app);
 
 
 //load passport strategies

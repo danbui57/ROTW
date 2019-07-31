@@ -1,13 +1,12 @@
 module.exports = function(app, user) {
   
-    app.get("/api/dashboard", function(req, res) {
-        const User = user;
+    app.get("/api/home", function(req, res) {
+  
         const id = req.session.passport.user
 
-        User.findByPk(id)
-        .then(function (user) {
-             const User = user.get();
-             res.json(User)
+        user.findByPk(id)
+        .then(function (User) {
+             return res.json(User.get())
         })
 });
 
