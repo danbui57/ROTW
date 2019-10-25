@@ -37,20 +37,22 @@
 }
 
 
-#roastPic {
-    width: 40%;
-    margin: 10px 30%;
+img {
+    width: 400px;
+    margin: auto 425px;
+    border: solid;
+    text-align: center;
 
 }
 
-#commentBox {
+/* #commentBox {
     margin: 0px 50px 25px 50px
 }
 
 #submit {
     float:right;
     margin-right: 50px 
-}
+} */
 
 
 .like {
@@ -78,19 +80,20 @@ hr {
 #commentBox {
     margin: 25px 0 50px 30%;
     border: inset
-}
+} 
 
-#submit {
-    margin: 23px 30% 50px 0
-}
+/* #submit {
+    margin: 23px 30% 50px ;
+    float: right;
+} */
 
-.post-container {
+/* .post-container {
 
     width: 40%;
     margin: 10px 30%;
     border-style: solid double solid double
-}
-.userComment {
+} */
+/* .userComment {
     margin-left:5px
-}
+} */
 

@@ -1,29 +1,29 @@
-module.exports = function(sequelize, Sequelize) {
+module.exports = function(sequelize, dataTypes) {
  
     const User = sequelize.define('user', {
  
         id: {
             autoIncrement: true,
             primaryKey: true,
-            type: Sequelize.INTEGER
+            type: dataTypes.INTEGER
         },
  
         firstname: {
-            type: Sequelize.STRING,
+            type: dataTypes.STRING,
             notEmpty: true
         },
  
         lastname: {
-            type: Sequelize.STRING,
+            type: dataTypes.STRING,
             notEmpty: true
         },
  
         username: {
-            type: Sequelize.TEXT
+            type: dataTypes.TEXT
         },
  
         email: {
-            type: Sequelize.STRING,
+            type: dataTypes.STRING,
             unique: true,
             validate: {
                 isEmail: true
@@ -31,16 +31,16 @@ module.exports = function(sequelize, Sequelize) {
         },
  
         password: {
-            type: Sequelize.STRING,
+            type: dataTypes.STRING,
             allowNull: false
         },
  
         last_login: {
-            type: Sequelize.DATE
+            type: dataTypes.DATE
         },
  
         status: {
-            type: Sequelize.ENUM('active', 'inactive'),
+            type: dataTypes.ENUM('active', 'inactive'),
             defaultValue: 'active'
         }
  
