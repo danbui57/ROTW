@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 // let url = window.location
 
-                $.get("/api/signin", function (dat) {
+                $.get("/api/signin", function (data) {
 
                         url.href = "dashboard/?user_id=" + data.id
                         title.html("Welcome, " + data.username)

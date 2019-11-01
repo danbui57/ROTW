@@ -1,6 +1,6 @@
 module.exports = function(app, db) {
   
-    app.get("/api/home", function(req, res) {
+    app.get("/api/home/", function(req, res) {
   
         const id = req.session.passport.user
 
