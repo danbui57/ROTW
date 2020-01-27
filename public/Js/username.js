@@ -124,7 +124,7 @@ $.ajax({
         function postUsername() {
                 $.get("/api/home/", function (data) {
 
-                        Title.html("Welcome, " + data.username)
+                        Title.html("Welcome " + data.username + "!")
                         Title.attr("value", data.username)
                         console.log("THIS IS DATA: ", data);
                 })
@@ -224,16 +224,15 @@ $.ajax({
 
 
         function displayEmpty(id) {
-                const query = window.location.search;
+                // const query = window.location.search;
                 let partial = "";
                 if (id) {
-                        partial = " for User #" + id;
+                        partial = " User #" + id;
                 }
                 PostBox.empty();
                 const messageH2 = $("<h2>");
-                messageH2.css({ "text-align": "center", "margin-top": "50px" });
-                messageH2.html("No posts yet" + partial + ", navigate <a href='/cms" + query +
-                        "'>here</a> in order to get started.");
+                // messageH2.css({ "text-align": "center" });
+                messageH2.html("No posts yet for" + partial);
                 PostBox.append(messageH2);
         }
 

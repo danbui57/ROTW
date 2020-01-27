@@ -1,16 +1,15 @@
-i<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Roast Me</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--CSS-->
   <link rel="stylesheet" type="text/css" media="screen" href="/css/homepage.css" />
   <!--Jquery Script-->
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -24,21 +23,17 @@ i<!DOCTYPE html>
   <!--Jquery link-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <!--Stackpath CSS-->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!--Stackpath Javascript-->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 
 </head>
 
 <body>
-
   <div id="bg">
-    <nav class="navbar fixed-top navbar-dark bg-dark">
-      <a id="title" class="navbar-brand" href="#">Roast Of The Week</a>
+    <nav class="navbar sticky-top navbar-dark bg-dark">
+      <a id="title" class="navbar-brand" href="#"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -61,12 +56,13 @@ i<!DOCTYPE html>
         </form>
       </div>
     </nav>
+    
 
     <div id="text" class=" animated fadeInUp slow">Get Ready To Roast!!</div>
-
+  </div>
     <div id="bottom-text" class="animated flash delay-2s slow">How Do You Play?</div>
 
-    <div id="container">
+    
 
       <div id="section1">
         <h1>Introduction</h1>
@@ -75,29 +71,25 @@ i<!DOCTYPE html>
           and get the most votes to win the cash prize! </p>
         <h1>Quick Start</h1>
         <hr>
-        <button class="Btn signUp">sign up now!</button>
+        <button class="btn button button-primary" id="signUp">sign up now!</button>
       </div>
-    </div>
 
     <img id="photo" src="https://pics.me.me/post-malone-looks-like-the-01-of-germs-lysol-didnt-41575293.png" alt="postmalone">
 
     <form id="postForm">
       <input id="commentBox" type="text" placeholder="Write your comment here..." name="message" size="30px">
-      <button type="submit" id="submit" class="Btn button button-primary">COMMENT</button>
+      <button type="submit" id="submit" class="btn button button-primary">COMMENT</button>
     </form>
 
-    <div class="row">
-      <div id="comment" class="col-md-12 post-container">
+    <div>
+      <div id="comment" class=" row-lg-10 post-container"></div>
       </div>
-    </div>
 
 
 
 
-  </div>
+  
   <script src="/Js/username.js"></script>
-
-  <script src="/Js/main.js"></script>
 
 
 </body>
